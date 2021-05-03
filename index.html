@@ -6,6 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles/style.css">
         <link rel="icon" href="favicon.png" type="image/png">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Red+Rose:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
         <link rel="stylesheet"
             href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
@@ -324,60 +326,58 @@
                 </div>
             </section>
             <!-- PROJECTS CONTENT ENDS HERE -->
-            <!-- CONTACT CONTENT STARTS HERE -->
-            <section id="contact" class="contact">
-                <div class="wrapper">
-                    <h2 class="contact__title">get in touch</h2>
-                    <div class="contact__content">
-                        <form id="contact__form" class="contact__form">
-                            <div class="contact__formCell">
-                                <label for="name">Name:</label>
-                                <input id="name" class="contact__input contact__input--name" name="Name" type="text" placeholder="kevin smith" autocomplete="off" required>
-                            </div>
-                            <div class="contact__formCell">
-                                <label for="emailAddress">Email:</label>
-                                <input id="emailAddress" class="contact__input contact__input--email" name="Email Address" type="email" placeholder="kevinsmith@gmail.com" autocomplete="off" required>
-                            </div>
-                            <div class="contact__formCell">
-                                <label for="message">Message:</label>
-                                <textarea id="message" class="contact__input contact__input--message" name="Message" placeholder="Leave a message here" cols="40" rows="6" required></textarea>
-                            </div>
-                            <input id="submit" class="contact__submit" type="submit" value="submit">
-                        </form>
-                    </div>
-                </div>
-            </section>
-            <!-- CONTACT CONTENT ENDS HERE -->
         </main>
         <!-- MAIN CONTENT ENDS HERE -->
         <!-- FOOTER CONTENT STARTS HERE -->
         <footer class="footer">
             <div class="wrapper">
-                <ul class="footer__socialList">
-                    <li class="footer__socialIcon">
-                        <a class="footer__link" href="https://twitter.com/VinceDCodes" aria-label="Goes to Vincent Dang's Twitter profile">
-                            <i class="fab fa-twitter" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li class="footer__socialIcon">
-                        <a class="footer__link" href="https://www.linkedin.com/in/vincent-dang-18709712b/" aria-label="Goes to Vincent Dang's Linkedin profile">
-                            <i class="fab fa-linkedin" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li class="footer__socialIcon">
-                        <a class="footer__link" href="https://github.com/DangVincent" aria-label="Goes to Vincent Dang's Github profile">
-                            <i class="fab fa-github" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li class="footer__socialIcon">
-                        <a class="footer__link" href="https://medium.com/@vncntdang" aria-label="Goes to Vincent Dang's Medium profile">
-                            <i class="fab fa-medium" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                </ul>
-                <p class="footer__text">
-                    <i class="far fa-copyright" aria-hidden="true" aria-label="copyright icon"></i> <span id="year"></span> developed by vincent dang
-                </p>
+                <!-- CONTACT CONTENT STARTS HERE -->
+                <div id="contact" class="footer__topContent">
+                    <h2 class="footer__title">contact</h2>
+                    <form id="footer__form" class="footer__form">
+                        <div class="footer__formCell">
+                            <label class="footer__label" for="name">Name:</label>
+                            <input id="name" class="footer__input footer__input--name" name="Name" type="text" placeholder="kevin smith" autocomplete="off" required>
+                        </div>
+                        <div class="footer__formCell">
+                            <label class="footer__label" for="emailAddress">Email:</label>
+                            <input id="emailAddress" class="footer__input footer__input--email" name="Email Address" type="email" placeholder="kevinsmith@gmail.com" autocomplete="off" required>
+                        </div>
+                        <div class="footer__formCell">
+                            <label class="footer__label" for="message">Message:</label>
+                            <textarea id="message" class="footer__input footer__input--message" name="Message" placeholder="Leave a message here" cols="40" rows="6" required></textarea>
+                        </div>
+                        <input id="submit" class="footer__submit" type="submit" value="submit">
+                    </form>
+                </div>
+                <!-- CONTACT CONTENT ENDS HERE -->
+                <div class="footer__bottomContent">
+                    <ul class="footer__socialList">
+                        <li class="footer__socialIcon">
+                            <a class="footer__link" href="https://twitter.com/VinceDCodes" aria-label="Goes to Vincent Dang's Twitter profile">
+                                <i class="fab fa-twitter" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li class="footer__socialIcon">
+                            <a class="footer__link" href="https://www.linkedin.com/in/vincent-dang-18709712b/" aria-label="Goes to Vincent Dang's Linkedin profile">
+                                <i class="fab fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li class="footer__socialIcon">
+                            <a class="footer__link" href="https://github.com/DangVincent" aria-label="Goes to Vincent Dang's Github profile">
+                                <i class="fab fa-github" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li class="footer__socialIcon">
+                            <a class="footer__link" href="https://medium.com/@vncntdang" aria-label="Goes to Vincent Dang's Medium profile">
+                                <i class="fab fa-medium" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="footer__text">
+                        <i class="far fa-copyright" aria-hidden="true" aria-label="copyright icon"></i> <span id="year"></span> developed by vincent dang
+                    </p>
+                </div>
             </div>
         </footer>
         <!-- FOOTER CONTENT ENDS HERE -->

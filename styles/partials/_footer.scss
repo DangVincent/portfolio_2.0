@@ -1,3 +1,85 @@
 // FOOTER STYLES STARTS HERE
-
+.footer {
+    background: #1d1d1f;
+    padding: 50px 0;
+    &__topContent {
+        color: $white;
+    }
+    &__title {
+        @include fontBaseSize(4.4vw);
+        text-transform: capitalize;
+    }
+    &__form {
+        margin: 50px 0 100px;
+    }
+    &__formCell {
+        margin-bottom: 25px;
+        color: $white;
+        display: flex;
+        flex-direction: column;
+    }
+    &__label {
+        @include fontBaseSize(1.2rem);
+    }
+    &__input {
+        @include fontBaseSize(1.2rem);
+        margin-top: 10px;
+        padding: 5px 10px;
+        transition: color 0.1s ease-in-out;
+        color: $black;
+        &:focus {
+            border: 2px solid $primaryColour;
+        }
+        &--name {
+            width: 100%;
+            border: 2px solid $black;
+            &::placeholder {
+                color: $black;
+                opacity: 0.6;
+            }
+        }
+        &--email {
+            @extend .footer__input--name;
+        }
+        &--message {
+            @extend .footer__input--name;
+            resize: none;
+        }
+    }
+    &__submit {
+        background: none;
+        border: 2px solid $white;
+        color: $white;
+        padding: 5px 20px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        transition: color 0.1s ease-in-out, box-shadow 0.1s ease-in-out, border 0.1s ease-in-out;
+        &:hover,
+        &:focus {
+            color: $primaryColour;
+            border: 2px solid $primaryColour;
+            box-shadow: 3px 3px $primaryColour;
+        }
+    }
+    &__socialList {
+        display: flex;
+        margin: 50px 0 25px;
+    }
+    &__socialIcon {
+        font-size: 2.5vw;
+        margin-right: 50px;
+    }
+    &__link {
+        color: $white;
+        transition: color 0.1s linear;
+        &:hover {
+            color: $primaryColour;
+        }
+    }
+    &__text {
+        @include fontBaseSize(1.2vw);
+        color: #7A7A7A;
+        text-transform: capitalize;
+    }
+}
 // FOOTER STYLES ENDS HERE

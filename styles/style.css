@@ -211,7 +211,7 @@ ul li {
 }
 
 .wrapper {
-  max-width: 1280px;
+  max-width: 1280vw;
   width: 80%;
   margin: 0 auto;
 }
@@ -227,4 +227,87 @@ ul li {
   left: 0;
   right: 0;
   top: 0;
+}
+
+.footer {
+  background: #1d1d1f;
+  padding: 50px 0;
+}
+.footer__topContent {
+  color: #fff;
+}
+.footer__title {
+  font-size: 4.4vw;
+  font-family: "Red Rose", cursive;
+  text-transform: capitalize;
+}
+.footer__form {
+  margin: 50px 0 100px;
+}
+.footer__formCell {
+  margin-bottom: 25px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.footer__label {
+  font-size: 1.2rem;
+  font-family: "Red Rose", cursive;
+}
+.footer__input {
+  font-size: 1.2rem;
+  font-family: "Red Rose", cursive;
+  margin-top: 10px;
+  padding: 5px 10px;
+  transition: color 0.1s ease-in-out;
+  color: #000;
+}
+.footer__input:focus {
+  border: 2px solid #f9d76a;
+}
+.footer__input--name, .footer__input--message, .footer__input--email {
+  width: 100%;
+  border: 2px solid #000;
+}
+.footer__input--name::placeholder, .footer__input--message::placeholder, .footer__input--email::placeholder {
+  color: #000;
+  opacity: 0.6;
+}
+.footer__input--message {
+  resize: none;
+}
+.footer__submit {
+  background: none;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 5px 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: color 0.1s ease-in-out, box-shadow 0.1s ease-in-out, border 0.1s ease-in-out;
+}
+.footer__submit:hover, .footer__submit:focus {
+  color: #f9d76a;
+  border: 2px solid #f9d76a;
+  box-shadow: 3px 3px #f9d76a;
+}
+.footer__socialList {
+  display: flex;
+  margin: 50px 0 25px;
+}
+.footer__socialIcon {
+  font-size: 2.5vw;
+  margin-right: 50px;
+}
+.footer__link {
+  color: #fff;
+  transition: color 0.1s linear;
+}
+.footer__link:hover {
+  color: #f9d76a;
+}
+.footer__text {
+  font-size: 1.2vw;
+  font-family: "Red Rose", cursive;
+  color: #7A7A7A;
+  text-transform: capitalize;
 }
