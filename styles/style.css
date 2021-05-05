@@ -229,6 +229,152 @@ ul li {
   top: 0;
 }
 
+.fa-html5 {
+  color: #FD7E14;
+}
+
+.fa-css3-alt {
+  color: #2196F3;
+}
+
+.fa-sass {
+  color: #D0649B;
+}
+
+.fa-js {
+  color: #F7C427;
+}
+
+.fa-react {
+  color: #5FD3F6;
+}
+
+.devicon-jquery-plain {
+  color: #0865A7;
+}
+
+.projects {
+  padding: 100px 0;
+}
+.projects__title {
+  font-size: 5rem;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  line-height: 100px;
+  margin-bottom: 50px;
+}
+.projects__outlineLetter {
+  letter-spacing: 20px;
+  color: #fff;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.projects__outlineLetter:hover {
+  color: #000;
+}
+.projects__containerList {
+  display: flex;
+  flex-direction: column;
+}
+.projects__containerItem {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+.projects__containerItem:nth-of-type(even) .projects__imageContainer {
+  order: 1;
+}
+.projects__containerItem:nth-of-type(even) .projects__image:nth-of-type(2) {
+  left: -20px;
+}
+.projects__containerItem:nth-of-type(even) .projects__link:hover, .projects__containerItem:nth-of-type(even) .projects__link:focus {
+  box-shadow: -5px 5px #f9d76a;
+}
+.projects__containerItem:nth-of-type(2) .projects__toolItem:nth-of-type(6) {
+  text-transform: uppercase;
+}
+.projects__containerItem:nth-of-type(4) .projects__toolItem:nth-of-type(4) {
+  text-transform: uppercase;
+}
+.projects__imageContainer {
+  width: 40%;
+  position: relative;
+}
+.projects__image:nth-child(2) {
+  width: 20%;
+  position: absolute;
+  bottom: 0;
+  right: -20px;
+}
+.projects__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
+}
+.projects__subheading {
+  font-size: 2.5rem;
+  font-family: "Raleway", sans-serif;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+.projects__headingInner {
+  text-transform: uppercase;
+}
+.projects__toolsList {
+  font-size: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.projects__toolItem {
+  font-size: 2.4rem;
+  margin-right: 10px;
+}
+.projects__toolItem:last-of-type {
+  margin-right: 0;
+}
+.projects__description {
+  font-size: 1rem;
+  font-family: "Raleway", sans-serif;
+}
+.projects__description::first-letter {
+  text-transform: capitalize;
+}
+.projects__linksList {
+  font-size: 1rem;
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  margin-top: 25px;
+}
+.projects__linkItem {
+  margin: 0 10px;
+}
+.projects__linkItem:first-child {
+  margin-left: 0;
+}
+.projects__linkItem:last-child {
+  margin-right: 0;
+}
+.projects__link {
+  font-size: 1rem;
+  font-family: "Raleway", sans-serif;
+  text-transform: capitalize;
+  background: #000;
+  color: #fff;
+  letter-spacing: 2px;
+  padding: 10px 20px;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.projects__link:hover, .projects__link:focus {
+  color: #f9d76a;
+  box-shadow: 5px 5px #f9d76a;
+}
+.projects__link:focus {
+  outline: none;
+}
+
 .footer {
   background: #1d1d1f;
   padding: 50px 0;
@@ -237,9 +383,10 @@ ul li {
   color: #fff;
 }
 .footer__title {
-  font-size: 4.4vw;
-  font-family: "Red Rose", cursive;
-  text-transform: capitalize;
+  font-size: 4rem;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 8px;
 }
 .footer__form {
   margin: 50px 0 100px;
@@ -252,11 +399,11 @@ ul li {
 }
 .footer__label {
   font-size: 1.2rem;
-  font-family: "Red Rose", cursive;
+  font-family: "Raleway", sans-serif;
 }
 .footer__input {
   font-size: 1.2rem;
-  font-family: "Red Rose", cursive;
+  font-family: "Raleway", sans-serif;
   margin-top: 10px;
   padding: 5px 10px;
   transition: color 0.1s ease-in-out;
@@ -283,7 +430,7 @@ ul li {
   padding: 5px 20px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  transition: color 0.1s ease-in-out, box-shadow 0.1s ease-in-out, border 0.1s ease-in-out;
+  transition: color 0.1s ease-in-out, border 0.1s ease-out;
 }
 .footer__submit:hover, .footer__submit:focus {
   color: #f9d76a;
@@ -295,7 +442,7 @@ ul li {
   margin: 50px 0 25px;
 }
 .footer__socialIcon {
-  font-size: 2.5vw;
+  font-size: 2.5rem;
   margin-right: 50px;
 }
 .footer__link {
@@ -306,8 +453,8 @@ ul li {
   color: #f9d76a;
 }
 .footer__text {
-  font-size: 1.2vw;
-  font-family: "Red Rose", cursive;
+  font-size: 1.2rem;
+  font-family: "Raleway", sans-serif;
   color: #7A7A7A;
   text-transform: capitalize;
 }

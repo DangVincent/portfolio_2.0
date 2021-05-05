@@ -6,8 +6,9 @@
         color: $white;
     }
     &__title {
-        @include fontBaseSize(4.4vw);
-        text-transform: capitalize;
+        @include fontBaseSize(4rem);
+        text-transform: uppercase;
+        letter-spacing: 8px;
     }
     &__form {
         margin: 50px 0 100px;
@@ -15,7 +16,12 @@
     &__formCell {
         margin-bottom: 25px;
         color: $white;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
     }
     &__label {
@@ -25,6 +31,8 @@
         @include fontBaseSize(1.2rem);
         margin-top: 10px;
         padding: 5px 10px;
+        -webkit-transition: color 0.1s ease-in-out;
+        -o-transition: color 0.1s ease-in-out;
         transition: color 0.1s ease-in-out;
         color: $black;
         &:focus {
@@ -33,6 +41,22 @@
         &--name {
             width: 100%;
             border: 2px solid $black;
+            &::-webkit-input-placeholder {
+                color: $black;
+                opacity: 0.6;
+            }
+            &::-moz-placeholder {
+                color: $black;
+                opacity: 0.6;
+            }
+            &:-ms-input-placeholder {
+                color: $black;
+                opacity: 0.6;
+            }
+            &::-ms-input-placeholder {
+                color: $black;
+                opacity: 0.6;
+            }
             &::placeholder {
                 color: $black;
                 opacity: 0.6;
@@ -53,31 +77,38 @@
         padding: 5px 20px;
         text-transform: uppercase;
         letter-spacing: 2px;
-        transition: color 0.1s ease-in-out, box-shadow 0.1s ease-in-out, border 0.1s ease-in-out;
+        -webkit-transition: color 0.1s ease-in-out, border 0.1s ease-out, -webkit-box-shadow 0.1s ease-in-out;
+        -o-transition: color 0.1s ease-in-out, box-shadow 0.1s ease-in-out, border 0.1s ease-out;
+        transition: color 0.1s ease-in-out, border 0.1s ease-out, -webkit-box-shadow 0.1s ease-in-out;
         &:hover,
         &:focus {
             color: $primaryColour;
             border: 2px solid $primaryColour;
+            -webkit-box-shadow: 3px 3px $primaryColour;
             box-shadow: 3px 3px $primaryColour;
         }
     }
     &__socialList {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         margin: 50px 0 25px;
     }
     &__socialIcon {
-        font-size: 2.5vw;
+        font-size: 2.5rem;
         margin-right: 50px;
     }
     &__link {
         color: $white;
+        -webkit-transition: color 0.1s linear;
+        -o-transition: color 0.1s linear;
         transition: color 0.1s linear;
         &:hover {
             color: $primaryColour;
         }
     }
     &__text {
-        @include fontBaseSize(1.2vw);
+        @include fontBaseSize(1.2rem);
         color: #7A7A7A;
         text-transform: capitalize;
     }

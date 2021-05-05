@@ -1,3 +1,150 @@
 // MAIN STYLES STARTS HERE
+.fa-html5 {
+    color: #FD7E14;
+}
+.fa-css3-alt {
+    color: #2196F3;
+}
+.fa-sass {
+    color: #D0649B;
+}
+.fa-js {
+    color: #F7C427;
+}
+.fa-react {
+    color: #5FD3F6;
+}
+.devicon-jquery-plain {
+    color: #0865A7;
+}
 
+.projects {
+    padding: 100px 0;
+    &__title {
+        @include fontBaseSize(5rem);
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        line-height: 100px;
+        margin-bottom: 50px;
+    }
+    &__outlineLetter {
+        letter-spacing: 20px;
+        color: #fff;
+        text-shadow: -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+        &:hover {
+            color: #000;
+        }
+    }
+    &__containerList {
+        display: flex;
+        flex-direction: column;
+    }
+    &__containerItem {
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 100px;
+    }
+    &__containerItem:nth-of-type(even) & {
+        &__imageContainer {
+            order: 1;
+        }
+        &__image:nth-of-type(2) {
+            left: -20px;
+        }
+        &__link:hover,
+        &__link:focus {
+            box-shadow: -5px 5px $primaryColour;
+        }
+    }
+    &__containerItem:nth-of-type(2) & {
+        &__toolItem:nth-of-type(6) {
+            text-transform: uppercase;
+        }
+    }
+    &__containerItem:nth-of-type(4) & {
+        &__toolItem:nth-of-type(4) {
+            text-transform: uppercase;
+        }
+    }   
+    &__imageContainer {
+        width: 40%;
+        position: relative;
+    }
+    &__image {
+        &:nth-child(2) {
+            width: 20%;
+            position: absolute;
+            bottom: 0;
+            right: -20px;
+        }
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 40%;
+    }
+    &__subheading {
+        @include fontBaseSize(2.5rem);
+        text-transform: capitalize;
+        margin-bottom: 20px;
+    }
+    &__headingInner {
+        text-transform: uppercase;
+    }
+    &__toolsList {
+        font-size: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+    &__toolItem{
+        font-size: 2.4rem;
+        margin-right: 10px;
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+    &__description {
+        @include fontBaseSize(1rem);
+        &::first-letter {
+            text-transform: capitalize;
+        }
+    }
+    &__linksList {
+        @include fontBaseSize(1rem);
+        display: flex;
+        margin-top: 25px;
+    }
+    &__linkItem {
+        margin: 0 10px;
+        &:first-child {
+            margin-left: 0;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__link {
+        @include fontBaseSize(1rem);
+        text-transform: capitalize;
+        background: $black;
+        color: $white;
+        letter-spacing: 2px;
+        padding: 10px 20px;
+        transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        &:hover,
+        &:focus {
+            color: $primaryColour;
+            box-shadow: 5px 5px $primaryColour;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+}
 // MAIN STYLES ENDS HERE
