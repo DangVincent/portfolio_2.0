@@ -25,6 +25,57 @@
     color: #E84E31;
 }
 
+.about {
+    padding: 100px 0;
+    &__title {
+        @include fontBaseSize(5rem); 
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        line-height: 100px;
+        margin-bottom: 50px;
+    }
+    &__outlineLetter {
+        letter-spacing: 20px;
+        color: #fff;
+        text-shadow: -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+        &:hover {
+            color: #000;
+        }
+    }
+    &__content {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 50px;
+    }
+    &__imageContainer {
+        width: 25%;
+        border-radius: 5px;
+        overflow: hidden;
+        box-shadow: 10px 10px 10px $black;
+    }
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &__description {
+        @include fontBaseSize(1.2rem);
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__text {
+        margin-bottom: 20px;
+        &::first-letter {
+            text-transform: capitalize;
+        }
+    }
+}
+
 .skills {
     background: $primaryColour;
     padding: 100px 0;
