@@ -1,4 +1,5 @@
 // MAIN STYLES STARTS HERE
+
 .fa-html5 {
     color: #FD7E14;
 }
@@ -16,6 +17,38 @@
 }
 .devicon-jquery-plain {
     color: #0865A7;
+}
+.fa-wordpress {
+    color: #00569C;
+}
+.devicon-git-plain {
+    color: #E84E31;
+}
+
+.skills {
+    background: $primaryColour;
+    padding: 100px 0;
+    &__title {
+        @include fontBaseSize(5rem);
+        text-transform: uppercase;
+        letter-spacing: 5px;
+    }
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-gap: 50px;
+        margin-top: 50px;
+    }
+    &__item {
+        text-align: center;
+        font-size: 3rem;
+    }
+    &__text {
+        @include fontBaseSize(0.9rem);
+        margin-top: 10px;
+        text-align: center;
+        text-transform: uppercase;
+    }
 }
 
 .projects {

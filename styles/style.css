@@ -253,6 +253,42 @@ ul li {
   color: #0865A7;
 }
 
+.fa-wordpress {
+  color: #00569C;
+}
+
+.devicon-git-plain {
+  color: #E84E31;
+}
+
+.skills {
+  background: #f9d76a;
+  padding: 100px 0;
+}
+.skills__title {
+  font-size: 5rem;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+.skills__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 50px;
+  margin-top: 50px;
+}
+.skills__item {
+  text-align: center;
+  font-size: 3rem;
+}
+.skills__text {
+  font-size: 0.9rem;
+  font-family: "Raleway", sans-serif;
+  margin-top: 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 .projects {
   padding: 100px 0;
 }
