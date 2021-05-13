@@ -13,5 +13,167 @@
             top: 0;
         }
     }
+    &__topSection {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    &__topLeftSection {
+        width: 36%;
+        overflow: hidden;
+    }
+    &__topLeftBackground {
+        background-image: url("../../assets/projectsPreview.png");
+        background-position: left;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 5076px;
+        height: 780px;
+        -webkit-animation: slide 60s linear infinite;
+        animation: slide 20s linear infinite;
+    }
+    &__topRightSection {
+        width: 64%;
+        .wrapper {
+            padding: 20px 0 0;
+            margin: 0 80px;
+        }
+    }
+    &__navList {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    &__navItem {
+        @include fontBaseSize(1.2rem);
+        margin: 25px 0 25px 0;
+        width: 20%;
+        .header__link {
+            -webkit-transition: all 0.1s ease-in-out;
+            -o-transition: all 0.1s ease-in-out;
+            transition: all 0.1s ease-in-out;
+            position: relative;
+            &:before,
+            &:after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -5px;
+                width: 0px;
+                height: 3px;
+                margin: 5px 0 0;
+                -webkit-transition: all 0.1s ease-in-out;
+                -o-transition: all 0.1s ease-in-out;
+                transition: all 0.1s ease-in-out;
+                opacity: 0;
+                background-color: $black;
+            }
+        }
+        &:hover {
+            cursor: pointer;
+            .header__link {
+                &:before,
+                &:after {
+                    width: 100%;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    &__title {
+        @include fontBaseSize(7rem); 
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        line-height: 120px;
+        margin: 100px 0;
+    }
+    &__outlineLetter {
+        font-size: 5rem;
+        letter-spacing: 20px;
+        line-height: 0;
+        color: $white;
+        text-shadow: -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+    }
+    &__bottomSection {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+    &__bottomLeftSection {
+        @include fontBaseSize(2rem);
+        background: $primaryColour;
+        text-transform: capitalize;
+        padding: 100px; 
+        width: 36%;
+        .wrapper {
+            width: 60%;
+        }
+        .header__link {
+            position: relative;
+            bottom: 0;
+            font-weight: 600;
+            -webkit-transition: bottom 0.2s linear;
+            -o-transition: bottom 0.2s linear;
+            transition: bottom 0.2s linear;
+            &:hover {
+                bottom: 10px;
+            }
+        }
+    }
+    &__borderLine {
+        height: 5px;
+        width: 160px;
+        background: $black;
+    }
+    &__bottomRightSection {
+        background: $black;
+        padding: 100px;
+        width: 64%;
+    }
+    &__aboutList {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+    }
+    &__aboutItem {
+        color: $white;
+    }
+    &__link {
+        text-transform: capitalize;
+        color: $black;
+    }
+    &__text {
+        @include fontBaseSize(1.2rem);
+        line-height: 70px;
+        text-transform: capitalize;
+    }
+}
+
+// KEYFRAME STYLES STARTS HERE
+@keyframes slide {
+    0%{
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    50%{
+        -webkit-transform: translate3d(-350px, 0, 0);
+        transform: translate3d(-350px, 0, 0);
+    }
+    100%{
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
 }
 // HEADER STYLES ENDS HERE

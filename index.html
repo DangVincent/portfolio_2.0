@@ -8,7 +8,7 @@
         <link rel="icon" href="favicon.png" type="image/png">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
         <link rel="stylesheet"
             href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
@@ -18,22 +18,12 @@
         <!-- HEADER CONTENT STARTS HERE -->
         <header id="home" class="header">
             <section class="header__topSection">
-                <div class="wrapper">
-                    <a href="#about" class="header__skipLink">Skip to main content.</a>
-                    <div class="header__topLeftSection">
-                        <ul class="header__topLeftList">
-                            <li class="header__topLeftItem">
-                                <a class="header__link" href="#home"><span class="header__linkText">VD</span></a>
-                            </li>
-                            <li class="header__topLeftItem">
-                                <a class="header__link" href="#about"><span class="header__linkText">&#8595;</span></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="header__topMiddleSection">
-                        <img id="projectsPreview" src="assets/projectsPreview.png" alt="A preview of Vincent Dang's projects">
-                    </div>
-                    <div class="header__topRightSection">
+                <a href="#about" class="header__skipLink">Skip to main content.</a>
+                <div class="header__topLeftSection">
+                    <div class="header__topLeftBackground"></div>
+                </div>
+                <div class="header__topRightSection">
+                    <div class="wrapper">
                         <nav class="header__nav">
                             <ul class="header__navList">
                                 <li class="header__navItem">
@@ -50,16 +40,19 @@
                                 </li>
                             </ul>
                         </nav>
-                        <h1>vincent dang <span>front end developer</span></h1>
+                        <h1 class="header__title">vincent dang <br><span class="header__outlineLetter">f</span><span class="header__outlineLetter">r</span><span class="header__outlineLetter">o</span><span class="header__outlineLetter">n</span><span class="header__outlineLetter">t</span> <span class="header__outlineLetter">e</span><span class="header__outlineLetter">n</span><span class="header__outlineLetter">d</span> <span class="header__outlineLetter">d</span><span class="header__outlineLetter">e</span><span class="header__outlineLetter">v</span><span class="header__outlineLetter">e</span><span class="header__outlineLetter">l</span><span class="header__outlineLetter">o</span><span class="header__outlineLetter">p</span><span class="header__outlineLetter">e</span><span class="header__outlineLetter">r</span></h1>
                     </div>
                 </div>
             </section>
             <section class="header__bottomSection">
-                <div class="wrapper">
-                    <div class="header__bottomLeftSection">
-                        <a class="header__link" href="#projects">projects</a>
+                <div class="header__bottomLeftSection">
+                    <div class="wrapper">
+                            <a class="header__link" href="#projects">portfolio</a>
+                            <div class="header__borderLine"></div>
                     </div>
-                    <div class="header__bottomRightSection">
+                </div>
+                <div class="header__bottomRightSection">
+                    <div class="wrapper">
                         <ul class="header__aboutList">
                             <li class="header__aboutItem">
                                 <p class="header__text">
@@ -68,7 +61,7 @@
                             </li>
                             <li class="header__aboutItem">
                                 <p class="header__text">
-                                    🌎 traveler
+                                    🌎 traveller
                                 </p>
                             </li>
                             <li class="header__aboutItem">
@@ -385,7 +378,6 @@
         </footer>
         <!-- FOOTER CONTENT ENDS HERE -->
         <!-- SCRIPT LINKS STARTS HERE -->
-        <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=' crossorigin='anonymous'></script>
         <script src="js/script.js"></script>
         <!-- SCRIPT LINKS ENDS HERE -->
     </body>
