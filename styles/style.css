@@ -503,12 +503,6 @@ ul li {
 .projects__containerItem:nth-of-type(even) .projects__link:hover, .projects__containerItem:nth-of-type(even) .projects__link:focus {
   box-shadow: -5px 5px #f9d76a;
 }
-.projects__containerItem:nth-of-type(2) .projects__toolItem:nth-of-type(6) {
-  text-transform: uppercase;
-}
-.projects__containerItem:nth-of-type(4) .projects__toolItem:nth-of-type(4) {
-  text-transform: uppercase;
-}
 .projects__imageContainer {
   width: 40%;
   position: relative;
@@ -593,7 +587,7 @@ ul li {
 
 .footer {
   background: #1d1d1f;
-  padding: 50px 0;
+  padding: 100px 0;
 }
 .footer__topContent {
   color: #fff;

@@ -161,17 +161,7 @@
             -webkit-box-shadow: -5px 5px $primaryColour;
             box-shadow: -5px 5px $primaryColour;
         }
-    }
-    &__containerItem:nth-of-type(2) & {
-        &__toolItem:nth-of-type(6) {
-            text-transform: uppercase;
-        }
-    }
-    &__containerItem:nth-of-type(4) & {
-        &__toolItem:nth-of-type(4) {
-            text-transform: uppercase;
-        }
-    }   
+    } 
     &__imageContainer {
         width: 40%;
         position: relative;
