@@ -17,10 +17,17 @@
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
+        @include resLieutenant {
+            flex-direction: column;
+        }
     }
     &__topLeftSection {
         width: 36%;
         overflow: hidden;
+        @include resLieutenant {
+            order: 1;
+            width: 100%;
+        }
     }
     &__topLeftBackground {
         background-image: url("../../assets/projectsPreview.png");
@@ -29,20 +36,36 @@
         background-size: contain;
         width: 5076px;
         height: 780px;
-        -webkit-animation: slide 60s linear infinite;
+        -webkit-animation: slide 20s linear infinite;
         animation: slide 20s linear infinite;
+        @include resLieutenant {
+            width: 100%;
+            background-size: cover;
+            height: 300px;
+            animation: none;
+        }
     }
     &__topRightSection {
         width: 64%;
+        @include resLieutenant {
+            width: 100%;
+        }
         .wrapper {
             padding: 20px 0 0;
             margin: 0 80px;
+            @include resSergeant {
+                margin: 0 30px;
+            }
         }
     }
     &__navList {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
+        @include resCaptain {
+            flex-direction: column;
+            border-bottom: 3px solid $black;
+        }
     }
     &__navItem {
         @include fontBaseSize(1.2rem);
@@ -67,9 +90,13 @@
                 transition: all 0.1s ease-in-out;
                 opacity: 0;
                 background-color: $black;
+                @include resCaptain {
+                    
+                }
             }
         }
-        &:hover {
+        &:hover,
+        &:focus {
             cursor: pointer;
             .header__link {
                 &:before,
@@ -86,6 +113,29 @@
         letter-spacing: 5px;
         line-height: 120px;
         margin: 100px 0;
+        @include resGeneral {
+            font-size: 6rem;
+        }
+        @include resColonel {
+            font-size: 5rem;
+        }
+        @include resLieutenant {
+            font-size: 6rem;
+        }
+        @include resCaptain {
+            font-size: 5rem;
+            margin: 50px 0;
+        }
+        @include resSergeant {
+            font-size: 4rem;
+        }
+        @include resCorporal {
+            font-size: 3rem;
+            margin: 25px 0;
+        }
+        @include resPrivate {
+            font-size: 2.5rem;
+        }
     }
     &__outlineLetter {
         font-size: 5rem;
@@ -96,6 +146,27 @@
         1px -1px 0 #000,
         -1px 1px 0 #000,
         1px 1px 0 #000;
+        @include resGeneral {
+            font-size: 4rem;
+        }
+        @include resColonel {
+            font-size: 3rem;
+            letter-spacing: 15px;
+        }
+        @include resLieutenant {
+            font-size: 4rem;
+            letter-spacing: 10px;
+        }
+        @include resCaptain {
+            font-size: 3rem;
+        }
+        @include resSergeant {
+            font-size: 2rem;
+        }
+        @include resCorporal {
+            font-size: 1.6rem;
+            letter-spacing: 5px;
+        }
     }
     &__bottomSection {
         display: -webkit-box;
@@ -104,6 +175,9 @@
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center;
+        @include resLieutenant {
+            flex-direction: column;
+        }
     }
     &__bottomLeftSection {
         @include fontBaseSize(2rem);
@@ -111,6 +185,14 @@
         text-transform: capitalize;
         padding: 100px; 
         width: 36%;
+        @include resLieutenant {
+            padding: 50px;
+            width: 100%;
+            text-align: center;
+        }
+        @include resPrivate {
+            font-size: 1.6rem;
+        }
         .wrapper {
             width: 60%;
         }
@@ -130,11 +212,23 @@
         height: 5px;
         width: 160px;
         background: $black;
+        @include resLieutenant {
+            margin: 0 auto;
+        }
+        @include resPrivate {
+            width: 130px;
+        }
     }
     &__bottomRightSection {
         background: $black;
         padding: 100px;
         width: 64%;
+        @include resColonel {
+            padding: 40px 50px;
+        }
+        @include resLieutenant {
+            width: 100%;
+        }
     }
     &__aboutList {
         display: -webkit-box;
@@ -146,6 +240,17 @@
         -webkit-box-align: start;
         -ms-flex-align: start;
         align-items: flex-start;
+        @include resColonel {
+            flex-direction: column;
+        }
+        @include resLieutenant {
+            flex-direction: row;
+        }
+        @include resCaptain {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
     }
     &__aboutItem {
         color: $white;

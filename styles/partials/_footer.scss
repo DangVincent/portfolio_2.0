@@ -2,16 +2,38 @@
 .footer {
     background: #1d1d1f;
     padding: 100px 0;
+    @include resSergeant {
+        padding: 50px 0;
+    }
+    .wrapper {
+        @include resSergeant {
+            margin: 0 30px;
+        }
+    }
     &__topContent {
         color: $white;
     }
     &__title {
-        @include fontBaseSize(4rem);
+        @include fontBaseSize(5rem);
         text-transform: uppercase;
         letter-spacing: 8px;
+        @include resCaptain {
+            font-size: 4rem;
+        }
+        @include resCorporal {
+            font-size: 3rem;
+            letter-spacing: 2px;
+        }
+        @include resPrivate {
+            font-size: 2.5rem;
+        }
     }
     &__form {
+        @include fontBaseSize(1.2rem);
         margin: 50px 0 100px;
+        @include resCaptain {
+            font-size: 1rem;
+        }
     }
     &__formCell {
         margin-bottom: 25px;
@@ -24,11 +46,7 @@
         -ms-flex-direction: column;
         flex-direction: column;
     }
-    &__label {
-        @include fontBaseSize(1.2rem);
-    }
     &__input {
-        @include fontBaseSize(1.2rem);
         margin-top: 10px;
         padding: 5px 10px;
         -webkit-transition: color 0.1s ease-in-out;
@@ -97,6 +115,9 @@
     &__socialIcon {
         font-size: 2.5rem;
         margin-right: 50px;
+        @include resPrivate {
+            font-size: 1.6rem;
+        }
     }
     &__link {
         color: $white;
@@ -111,6 +132,9 @@
         @include fontBaseSize(1.2rem);
         color: #7A7A7A;
         text-transform: capitalize;
+        @include resPrivate {
+            font-size: 0.8rem;
+        }
     }
 }
 // FOOTER STYLES ENDS HERE

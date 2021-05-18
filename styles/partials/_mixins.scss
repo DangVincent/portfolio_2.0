@@ -3,4 +3,25 @@
     font-size: $baseSizeValue;
     font-family: 'Raleway', sans-serif;
 }
+@mixin resGeneral {
+    @media (max-width: 1470px) { @content; }
+}
+@mixin resColonel {
+    @media (max-width: 1245px) { @content; }
+}
+@mixin resLieutenant {
+    @media (max-width: 1020px) { @content; }
+}
+@mixin resCaptain {
+    @media (max-width: 700px) { @content; }
+}
+@mixin resSergeant {
+    @media (max-width: 600px) { @content; }
+}
+@mixin resCorporal {
+    @media (max-width: 535px) { @content; }
+}
+@mixin resPrivate {
+    @media (max-width: 400px) { @content; }
+}
 // MIXINS STYLES ENDS HERE

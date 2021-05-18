@@ -25,15 +25,36 @@
     color: #E84E31;
 }
 
-.about {
+.about,
+.skills,
+.projects {
     padding: 100px 0;
+    @include resSergeant {
+        padding: 50px 0;
+    }
+    .wrapper {
+        @include resSergeant {
+            margin: 0 30px;
+        }
+    }
     &__title {
         @include fontBaseSize(5rem); 
         text-transform: uppercase;
         letter-spacing: 5px;
         line-height: 100px;
         margin-bottom: 50px;
+        @include resSergeant {
+            font-size: 4rem;
+        }
+        @include resCorporal {
+            font-size: 3rem;
+            letter-spacing: 2px;
+        }
     }
+}
+
+.about,
+.projects {
     &__outlineLetter {
         letter-spacing: 20px;
         color: $white;
@@ -42,6 +63,14 @@
         -1px 1px 0 #000,
         1px 1px 0 #000;
     }
+}
+
+.about {
+    &__outlineLetter {
+        @include resCorporal {
+            letter-spacing: 5px;
+        }
+    }
     &__content {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -49,6 +78,10 @@
         -ms-flex-pack: distribute;
         justify-content: space-around;
         margin-top: 50px;
+        @include resColonel {
+            flex-direction: column;
+            align-items: center;
+        }
     }
     &__imageContainer {
         width: 25%;
@@ -56,6 +89,19 @@
         overflow: hidden;
         -webkit-box-shadow: 10px 10px 10px $black;
         box-shadow: 10px 10px 10px $black;
+        @include resColonel {
+            margin-bottom: 20px;
+            width: 30%;
+        }
+        @include resLieutenant {
+            width: 40%;
+        }
+        @include resCaptain {
+            width: 50%;
+        }
+        @include resPrivate {
+            width: 70%;
+        }
     }
     &__image {
         width: 100%;
@@ -76,6 +122,15 @@
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center;
+        @include resColonel {
+            width: 75%;
+        }
+        @include resSergeant {
+            font-size: 0.9rem;
+        }
+        @include resPrivate {
+            font-size: 0.8rem;
+        }
     }
     &__text {
         margin-bottom: 20px;
@@ -87,11 +142,10 @@
 
 .skills {
     background: $primaryColour;
-    padding: 100px 0;
     &__title {
-        @include fontBaseSize(5rem);
-        text-transform: uppercase;
-        letter-spacing: 5px;
+        @include resSergeant {
+            text-align: center;
+        }
     }
     &__list {
         display: -ms-grid;
@@ -99,6 +153,9 @@
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         grid-gap: 50px;
         margin-top: 50px;
+        @include resLieutenant {
+            grid-gap: 50px 10px;
+        }
     }
     &__item {
         text-align: center;
@@ -109,25 +166,25 @@
         margin-top: 10px;
         text-align: center;
         text-transform: uppercase;
+        @include resLieutenant {
+            font-size: 0.8rem;
+        }
     }
 }
 
 .projects {
-    padding: 100px 0;
     &__title {
-        @include fontBaseSize(5rem);
-        text-transform: uppercase;
-        letter-spacing: 5px;
-        line-height: 100px;
-        margin-bottom: 50px;
+        @include resPrivate {
+            font-size: 2.2rem;
+        }
     }
     &__outlineLetter {
-        letter-spacing: 20px;
-        color: #fff;
-        text-shadow: -1px -1px 0 #000,
-        1px -1px 0 #000,
-        -1px 1px 0 #000,
-        1px 1px 0 #000;
+        @include resLieutenant {
+            letter-spacing: 10px;
+        }
+        @include resCaptain {
+            letter-spacing: 5px;
+        }
     }
     &__containerList {
         display: -webkit-box;
@@ -144,14 +201,21 @@
         display: -ms-flexbox;
         display: flex;
         -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-                justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        @include resColonel {
+            flex-direction: column;
+            align-items: center;
+        }
     }
     &__containerItem:nth-of-type(even) & {
         &__imageContainer {
             -webkit-box-ordinal-group: 2;
             -ms-flex-order: 1;
             order: 1;
+            @include resColonel {
+                order: initial;
+            }
         }
         &__image:nth-of-type(2) {
             left: -20px;
@@ -160,11 +224,20 @@
         &__link:focus {
             -webkit-box-shadow: -5px 5px $primaryColour;
             box-shadow: -5px 5px $primaryColour;
+            @include resColonel {
+                box-shadow: none;
+            }
         }
     } 
     &__imageContainer {
         width: 40%;
         position: relative;
+        @include resCaptain {
+            width: 60%;
+        }
+        @include resCorporal {
+            width: 80%;
+        }
     }
     &__image {
         &:nth-child(2) {
@@ -186,11 +259,27 @@
         -ms-flex-pack: center;
         justify-content: center;
         width: 40%;
+        @include resColonel {
+            width: 50%;
+            margin: 20px 0;
+        }
+        @include resCaptain {
+            width: 80%;
+        }
     }
     &__subheading {
         @include fontBaseSize(2.5rem);
         text-transform: capitalize;
         margin-bottom: 20px;
+        @include resColonel {
+            text-align: center;
+        }
+        @include resCaptain {
+            font-size: 2.3rem;
+        }
+        @include resSergeant {
+            font-size: 2rem;
+        }
     }
     &__headingInner {
         text-transform: uppercase;
@@ -216,6 +305,9 @@
         &::first-letter {
             text-transform: capitalize;
         }
+        @include resCaptain {
+            font-size: 0.9rem;
+        }
     }
     &__linksList {
         @include fontBaseSize(1rem);
@@ -223,6 +315,12 @@
         display: -ms-flexbox;
         display: flex;
         margin-top: 25px;
+        @include resColonel {
+            justify-content: center;
+        }
+        @include resColonel {
+            font-size: 0.8rem;
+        }
     }
     &__linkItem {
         margin: 0 10px;
@@ -243,11 +341,20 @@
         -webkit-transition: color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
         -o-transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+        @include resColonel {
+            padding: 10px 50px;
+        }
+        @include resLieutenant {
+            padding: 10px 30px;
+        }
         &:hover,
         &:focus {
             color: $primaryColour;
             -webkit-box-shadow: 5px 5px $primaryColour;
             box-shadow: 5px 5px $primaryColour;
+            @include resColonel {
+                box-shadow: none;
+            }
         }
         &:focus {
             outline: none;
