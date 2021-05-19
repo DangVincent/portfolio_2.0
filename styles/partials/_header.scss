@@ -30,12 +30,12 @@
         }
     }
     &__topLeftBackground {
-        background-image: url("../../assets/projectsPreview.png");
+        background-image: url(../assets/projectsPreview.png);
         background-position: left;
         background-repeat: no-repeat;
-        background-size: contain;
-        width: 5076px;
-        height: 780px;
+        background-size: cover;
+        width: 1000px;
+        height: 610px;
         -webkit-animation: slide 20s linear infinite;
         animation: slide 20s linear infinite;
         @include resLieutenant {
@@ -90,9 +90,6 @@
                 transition: all 0.1s ease-in-out;
                 opacity: 0;
                 background-color: $black;
-                @include resCaptain {
-                    
-                }
             }
         }
         &:hover,
@@ -108,38 +105,30 @@
         }
     }
     &__title {
-        @include fontBaseSize(7rem); 
+        @include fontBaseSize(5.5rem); 
         text-transform: uppercase;
         letter-spacing: 5px;
-        line-height: 120px;
-        margin: 100px 0;
+        line-height: 100px;
+        margin: 40px 0 55px;
         @include resGeneral {
-            font-size: 6rem;
-        }
-        @include resColonel {
             font-size: 5rem;
-        }
-        @include resLieutenant {
-            font-size: 6rem;
         }
         @include resCaptain {
-            font-size: 5rem;
+            font-size: 4rem;
+            line-height: 80px;
             margin: 50px 0;
         }
-        @include resSergeant {
-            font-size: 4rem;
-        }
         @include resCorporal {
-            font-size: 3rem;
-            margin: 25px 0;
+            font-size: 2.8rem;
+            line-height: 60px;
         }
         @include resPrivate {
-            font-size: 2.5rem;
+            font-size: 2.4rem;
         }
     }
     &__outlineLetter {
-        font-size: 5rem;
-        letter-spacing: 20px;
+        font-size: 4.6rem;
+        letter-spacing: 15px;
         line-height: 0;
         color: $white;
         text-shadow: -1px -1px 0 #000,
@@ -148,10 +137,10 @@
         1px 1px 0 #000;
         @include resGeneral {
             font-size: 4rem;
+            letter-spacing: 12px;
         }
         @include resColonel {
-            font-size: 3rem;
-            letter-spacing: 15px;
+            font-size: 3.5rem;
         }
         @include resLieutenant {
             font-size: 4rem;
@@ -161,10 +150,10 @@
             font-size: 3rem;
         }
         @include resSergeant {
-            font-size: 2rem;
+            font-size: 2.5rem;
         }
         @include resCorporal {
-            font-size: 1.6rem;
+            font-size: 1.8rem;
             letter-spacing: 5px;
         }
     }
@@ -183,14 +172,17 @@
         @include fontBaseSize(2rem);
         background: $primaryColour;
         text-transform: capitalize;
-        padding: 100px; 
+        padding: 60px 100px; 
         width: 36%;
+        @include resColonel {
+            padding: 100px 50px;
+        }
         @include resLieutenant {
             padding: 50px;
             width: 100%;
             text-align: center;
         }
-        @include resPrivate {
+        @include resCorporal {
             font-size: 1.6rem;
         }
         .wrapper {
@@ -215,13 +207,13 @@
         @include resLieutenant {
             margin: 0 auto;
         }
-        @include resPrivate {
+        @include resCorporal {
             width: 130px;
         }
     }
     &__bottomRightSection {
         background: $black;
-        padding: 100px;
+        padding: 60px 100px;
         width: 64%;
         @include resColonel {
             padding: 40px 50px;

@@ -44,9 +44,11 @@
         line-height: 100px;
         margin-bottom: 50px;
         @include resSergeant {
+            line-height: 80px;
             font-size: 4rem;
         }
         @include resCorporal {
+            line-height: 60px;
             font-size: 3rem;
             letter-spacing: 2px;
         }
@@ -56,7 +58,7 @@
 .about,
 .projects {
     &__outlineLetter {
-        letter-spacing: 20px;
+        letter-spacing: 10px;
         color: $white;
         text-shadow: -1px -1px 0 #000,
         1px -1px 0 #000,
@@ -126,10 +128,7 @@
             width: 75%;
         }
         @include resSergeant {
-            font-size: 0.9rem;
-        }
-        @include resPrivate {
-            font-size: 0.8rem;
+            font-size: 1rem;
         }
     }
     &__text {
@@ -176,12 +175,10 @@
     &__title {
         @include resPrivate {
             font-size: 2.2rem;
+            line-height: 50px;
         }
     }
     &__outlineLetter {
-        @include resLieutenant {
-            letter-spacing: 10px;
-        }
         @include resCaptain {
             letter-spacing: 5px;
         }
@@ -305,9 +302,6 @@
         &::first-letter {
             text-transform: capitalize;
         }
-        @include resCaptain {
-            font-size: 0.9rem;
-        }
     }
     &__linksList {
         @include fontBaseSize(1rem);
@@ -317,9 +311,6 @@
         margin-top: 25px;
         @include resColonel {
             justify-content: center;
-        }
-        @include resColonel {
-            font-size: 0.8rem;
         }
     }
     &__linkItem {
